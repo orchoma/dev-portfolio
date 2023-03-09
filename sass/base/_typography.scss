@@ -1,0 +1,36 @@
+body{
+    font-family: 'Jost', sans-serif;
+    color: black;
+}
+
+a {
+    font-family: 'Jost', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    font-family: 'Jost', sans-serif;
+}
+
+.headline{
+    font-size: 8rem;
+    color: white;
+    letter-spacing: 1rem;
+
+    &__secondary{
+
+        font-size: 4rem;
+        color: white;
+        letter-spacing: .25rem;
+
+    }
+
+    &__tertiary{
+
+        font-size: 2rem;
+        color: white;
+        letter-spacing: .25rem;
+
+    }
+}

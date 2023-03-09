@@ -1,0 +1,318 @@
+/*
+
+0 - 600px: Phone
+600-900px: Tablet Portrait
+900-1200px: Tablet landscape
+[1200-1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+*/
+/*
+$breakpoint argument choices:
+- phone
+-tab-port
+-tab-land
+-big-desktop
+
+1em =16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 80%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  color: black;
+}
+
+a {
+  font-family: "Jost", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  font-family: "Jost", sans-serif;
+}
+
+.headline {
+  font-size: 8rem;
+  color: white;
+  letter-spacing: 1rem;
+}
+.headline__secondary {
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 0.25rem;
+}
+.headline__tertiary {
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 0.25rem;
+}
+
+.reveal {
+  position: relative;
+  animation: fadeIn;
+  opacity: 0;
+  transition: 3s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bg-video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+}
+.bg-video__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bio {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.btn {
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  border: solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  transition: all 0.5s;
+  margin-top: 3rem;
+}
+.btn:hover {
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.btn:hover a {
+  color: black;
+}
+
+.footer {
+  display: flex;
+  padding: 4rem 20rem;
+  transition: all 1s;
+  z-index: 1000;
+}
+.footer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%;
+}
+.footer__item {
+  list-style: none;
+  display: inline-block;
+}
+.footer__item:not(:last-child) {
+  margin-right: 6rem;
+}
+.footer__link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  color: black;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__start {
+  margin-right: auto;
+}
+.footer__end {
+  margin-left: auto;
+}
+.footer__title {
+  display: inline-block;
+  font-size: 3.5rem;
+  letter-spacing: 0.75rem;
+  text-decoration: none;
+  color: black;
+}
+.footer__logo {
+  height: 20rem;
+  width: 20rem;
+}
+
+.project__title-right {
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  padding-right: 20rem;
+}
+.project__title-left {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  padding-left: 20rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header__main-text {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
+}
+.header__button {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav {
+  display: flex;
+  padding: 4rem 10rem;
+  background-color: transparent;
+  transition: all 1s;
+  z-index: 1000;
+}
+.nav:hover {
+  background-color: white;
+}
+.nav:hover .nav__title {
+  color: black;
+}
+.nav:hover .nav__link {
+  color: black;
+}
+.nav__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  width: 100%;
+}
+.nav__item {
+  list-style: none;
+  display: inline-block;
+}
+.nav__item:not(:last-child) {
+  margin-right: 6rem;
+}
+.nav__link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  color: white;
+}
+.nav__link:hover {
+  text-decoration: underline;
+}
+.nav__start {
+  margin-right: auto;
+}
+.nav__end {
+  margin-left: auto;
+}
+.nav__title {
+  display: inline-block;
+  font-size: 3.5rem;
+  letter-spacing: 0.75rem;
+  text-decoration: none;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.section-header {
+  height: 100vh;
+}
+
+.section-portfolio {
+  position: relative;
+  background-image: url(/img/schmaltz.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.section-about {
+  position: relative;
+  background-image: url(/img/me.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}/*# sourceMappingURL=main.css.map */
