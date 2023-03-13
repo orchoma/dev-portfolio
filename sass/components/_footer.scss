@@ -41,6 +41,7 @@
 
     &__end{
         margin-left: auto;
+
     }
 
     &__title{
@@ -56,7 +57,7 @@
         width: 15rem;
 
         @include respond(phone){
-            scale: 1.6
+            scale: .88
         }
     }
 

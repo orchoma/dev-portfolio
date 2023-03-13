@@ -94,7 +94,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.25);
   z-index: 0;
 }
 .bg-video__content {
@@ -183,7 +183,7 @@ button {
 }
 @media (max-width: 37.5em) {
   .footer__logo {
-    scale: 1.6;
+    scale: 0.88;
   }
 }
 
@@ -221,10 +221,10 @@ button {
 }
 .project__banner-2 {
   position: absolute;
-  top: -52%;
-  left: -8%;
+  top: -35%;
+  left: -15%;
   transform: translate(-50%, -50%);
-  scale: 0.13;
+  scale: 0.2;
 }
 @media (max-width: 37.5em) {
   .project__banner-2 {
@@ -262,7 +262,7 @@ button {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    scale: 1.2;
+    scale: 0.8;
   }
 }
 
@@ -277,7 +277,7 @@ button {
 @media (max-width: 37.5em) {
   .header__text-box {
     position: absolute;
-    top: 63%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -560,7 +560,7 @@ button {
 
 .section-portfolio {
   position: relative;
-  background-image: url(/img/schmaltz.png);
+  background-image: url(/img/revival.png);
   background-position: center;
   background-size: cover;
   height: 100vh;

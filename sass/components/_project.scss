@@ -44,10 +44,10 @@
     &__banner-2{
 
         position: absolute;
-        top: -52%;
-        left: -8%;
+        top: -35%;
+        left: -15%;
         transform: translate(-50%, -50%);
-        scale: .13;
+        scale: .2;
 
         @include respond(phone){
 
@@ -92,7 +92,7 @@
         top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
-        scale: 1.2;
+        scale: .8;
 
         
     }
