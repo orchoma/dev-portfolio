@@ -8,6 +8,14 @@
         text-align: center;
         width: 50vw;
 
+        @include respond(phone){
+        position: absolute;
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        }
+
 
     }
 
@@ -33,6 +41,10 @@
 
         @include respond(big-desktop){
             scale: 1.5;
+        }
+
+        @include respond(phone){
+            scale: 1.6
         }
 
     }
